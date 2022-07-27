@@ -1,0 +1,68 @@
+.contacts {
+  margin-left: 70px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.contacts address {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 135%;
+  color: $color-white--70;
+
+  @include vp-769 {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 0.88rem;
+    line-height: 135%;
+  }
+}
+
+.contacts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+
+  @include vp-769 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.contacts li {
+  margin-bottom: 9px;
+}
+
+.contacts h4 {
+  margin-bottom: 23px;
+
+  @include vp-1023 {
+    margin-top: 6px;
+    margin-bottom: 22px;
+  }
+
+  @include vp-769 {
+    padding-top: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 19px;
+    border-top: 1px solid $color-alice-blue--70;
+    border-bottom: 1px solid $color-alice-blue--70;
+  }
+}
+
+.contacts a {
+  font-size: 1rem;
+  line-height: 156%;
+  color: $color-white--70;
+
+  @include vp-769 {
+    font-size: 0.88rem;
+    line-height: 179%;
+  }
+}

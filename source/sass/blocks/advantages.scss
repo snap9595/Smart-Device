@@ -1,0 +1,48 @@
+.advantages__wrapper {
+  margin-top: 120px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  list-style: none;
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__item {
+  border: 1px solid $color-whisper-grey;
+  border-left: 5px solid $color-sky-blue;
+}
+
+.advantages__item svg {
+  fill: $color-sky-blue;
+}
+
+.advantages__item h4 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 140%;
+  color: $color-sky-blue;
+}
+
+.advantages__item p {
+  font-size: 1rem;
+  line-height: 135%;
+  color: $color-black-pearl;
+}
+
+.advantages__item:hover {
+  background-color: $color-sky-blue;
+}
+
+.advantages__item:hover h4,
+.advantages__item:hover p,
+.advantages__item:hover svg {
+  color: $color-alice-blue;
+  fill: $color-alice-blue;
+}

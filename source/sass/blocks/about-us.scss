@@ -1,0 +1,86 @@
+.about-us {
+  position: relative;
+  margin-top: 120px;
+  display: flex;
+}
+
+.about-us h2 {
+  position: absolute;
+  top: 80px;
+  left: 45px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 9.8rem;
+  line-height: 140%;
+  color: transparent;
+  background-image: url("../img/about-bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-clip: text;
+  transform: rotate(-90deg);
+  user-select: none;
+
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.about-us__wrapper {
+  margin-left: 300px;
+
+  @include vp-769 {
+    margin-left: 0;
+  }
+}
+
+.about-us__wrapper h3 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 51px;
+  color: $color-black-pearl;
+}
+
+.about-us__wrapper p {
+  line-height: 138%;
+}
+
+.about-us__wrapper button {
+  display: none;
+  vertical-align: middle;
+  min-width: 180px;
+  padding: 8px 12px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 114%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-sky-blue;
+  border: 1px solid $color-sky-blue;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-whisper-grey;
+  }
+}
+
+.about-us__inner p {
+  display: none;
+}
+
+.is-nojs p {
+  display: block;
+}
+
+.is-active p {
+  display: block;
+}

@@ -1,0 +1,78 @@
+.boards {
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    url("../img/boards-bg-desktop@1x.jpg"),
+    linear-gradient(180deg, $color-black-pearl 100%, rgba(25, 32, 36, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../img/boards-bg-desktop@2x.jpg"),
+      linear-gradient(180deg, $color-black-pearl 100%, rgba(25, 32, 36, 0) 100%);
+  }
+
+  @include vp-1023 {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../img/boards-bg-tablet@1x.jpg"),
+      linear-gradient(180deg, $color-black-pearl 100%, rgba(25, 32, 36, 0) 100%);
+
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../img/boards-bg-tablet@2x.jpg"),
+        linear-gradient(180deg, $color-black-pearl 100%, rgba(25, 32, 36, 0) 100%);
+    }
+  }
+
+  @include vp-769 {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../img/boards-bg-mobile@1x.jpg"),
+      linear-gradient(180deg, $color-black-pearl 100%, rgba(25, 32, 36, 0) 100%);
+
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../img/boards-bg-mobile@2x.jpg"),
+        linear-gradient(180deg, $color-black-pearl 100%, rgba(25, 32, 36, 0) 100%);
+    }
+  }
+}
+
+.boards__wrapper {
+  min-height: 880px;
+  color: $color-alice-blue;
+  font-family: $ff-roboto-condensed;
+  text-transform: uppercase;
+}
+
+.boards__wrapper h2 {
+  padding-top: 300px;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 118%;
+  letter-spacing: 0.07em;
+
+  @include vp-769 {
+    font-size: 2.25rem;
+    line-height: 117%;
+  }
+}
+
+.boards__wrapper p {
+  font-family: $ff-default;
+  font-size: 1.38rem;
+  line-height: 155%;
+  text-transform: none;
+}
+
+.boards__wrapper a {
+  display: inline-block;
+  padding: 15px 25px;
+  vertical-align: middle;
+  color: $color-alice-blue;
+  background-color: $color-sky-blue;
+  font-weight: 700;
+  font-size: 1.13rem;
+  line-height: 117%;
+  letter-spacing: 0.05em;
+  border-radius: 3px;
+  user-select: none;
+}

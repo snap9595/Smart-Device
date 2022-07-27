@@ -16,19 +16,13 @@
 <body class="body">
   <header class="header">
     <nav class="nav container">
-      <div>
-        <a aria-current="page">
-          <svg width="55" height="55">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-          </svg>
-          <div>
-            <p>Smart Device</p>
-            <!-- Не забудь спросить -->
-            <span>Умные технологии</span>
-          </div>
-        </a>
-      </div>
-      <ul>
+      <a aria-current="page">
+        <picture>
+          <source media="(max-width: 769px)" srcset="./img/svg/logo-short.svg">
+          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
+        </picture>
+      </a>
+      <ul class="nav__list">
         <li>
           <a href="#">
             <svg width="20" height="20">
@@ -46,168 +40,218 @@
           </a>
         </li>
       </ul>
-      <a href="#">Заказать звонок</a>
+      <a class="nav__button" href="#">Заказать звонок</a>
     </nav>
   </header>
   <main class="main">
     <h1 class="visually-hidden">Сайт печатных плат Smart Device</h1>
 
-    <section>
-      <h2>Печатные платы</h2>
-      <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-      <a href="#">Получить бесплатную консультацию</a>
-    </section>
-    <section>
-      <h3 class="visually-hidden">Преимущества</h3>
-      <ul>
-        <li>
-          <svg width="35" height="35">
-            <use xlink:href="img/sprite_auto.svg#icon-stop-watch"></use>
-          </svg>
-          <h4>Оперативные сроки</h4>
-          <p>
-            Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
-            и&nbsp;доставлять
-            заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки.
-          </p>
-        </li>
-        <li>
-          <svg width="35" height="35">
-            <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
-          </svg>
-          <h4>Крупные поставщики</h4>
-          <p>
-            Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.
-          </p>
-        </li>
-        <li>
-          <svg width="35" height="35">
-            <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
-          </svg>
-          <h4>Полная конфиденциальность</h4>
-          <p>
-            По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
-          </p>
-        </li>
-        <li>
-          <svg width="35" height="35">
-            <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
-          </svg>
-          <h4>Персонализация стоимости</h4>
-          <p>
-            Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая
-            Вас устраивает.
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>О компании</h3>
-      <p>
-        Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии
-        с&nbsp;1997
-        года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
-      </p>
-      <p>
-        Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-        Печатные
-        платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
-        РоссАвтоПрома
-        (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-      </p>
-      <div>
-        <p>
-          Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
-          1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых
-          продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов
-          по&nbsp;всей стране и&nbsp;20
-          городов присутствия.
-        </p>
-        <p>
-          Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри
-          компании.
-          Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
-        </p>
+    <section class="boards">
+      <div class="boards__wrapper container">
+        <h2>Печатные платы</h2>
+        <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+        <a href="#form">Получить бесплатную консультацию</a>
       </div>
-      <button type="button">Подробнее</button>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper container">
+        <h3 class="visually-hidden">Преимущества</h3>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <svg width="35" height="35">
+              <use xlink:href="img/sprite_auto.svg#icon-stop-watch"></use>
+            </svg>
+            <h4>Оперативные сроки</h4>
+            <p>
+              Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
+              и&nbsp;доставлять
+              заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <svg width="35" height="35">
+              <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
+            </svg>
+            <h4>Крупные поставщики</h4>
+            <p>
+              Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <svg width="35" height="35">
+              <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
+            </svg>
+            <h4>Полная конфиденциальность</h4>
+            <p>
+              По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <svg width="35" height="35">
+              <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
+            </svg>
+            <h4>Персонализация стоимости</h4>
+            <p>
+              Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая
+              Вас устраивает.
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <div>
+    <section class="about-us container">
+      <h2>2022</h2>
+      <div class="about-us__wrapper">
+        <h3>О компании</h3>
+        <p>
+          Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
+          технологии
+          с&nbsp;1997
+          года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
+        </p>
+        <p>
+          Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+          Печатные
+          платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
+          РоссАвтоПрома
+          (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+        </p>
+        <div class="about-us__inner is-nojs">
+          <p>
+            Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+            1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых
+            продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов
+            по&nbsp;всей стране и&nbsp;20
+            городов присутствия.
+          </p>
+          <p>
+            Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой
+            внутри
+            компании.
+            Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
+          </p>
+        </div>
+        <button href="#" data-text-button="button">Подробнее</button>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="products__wrapper container">
         <h3>
-          <span>Smart Device предлагает следующие товары и&nbsp;услуги</span>
-          <span>Товары и&nbsp;услуги Smart Device</span>
+          <span class="products__span-desktop">Smart Device предлагает следующие товары и&nbsp;услуги</span>
+          <span class="products__span-mobile">Товары и&nbsp;услуги Smart Device</span>
         </h3>
 
-        <div>
-          <article>
+        <div class="products__inner">
+          <article class="products__cards">
             <a href="#">
               <h4>Производство печатных плат</h4>
+              <picture>
+                <source type="image/webp" media="(max-width: 769px)"
+                  srcset="img/cards/card-1-mobile@1x.webp 1x, img/cards/card-1-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/cards/card-1-tablet@1x.webp 1x, img/cards/card-1-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/cards/card-1-desktop@1x.webp 1x, img/cards/card-1-desktop@2x.webp 2x">
+
+                <!-- 1х: 350px; 2x: 700px -->
+                <img src="img/cards/card-1-desktop@1x.jpg" srcset="img/cards/card-1-desktop@2x.jpg 2x"
+                  alt="Катушка на плате." width="350" height="650">
+              </picture>
+              <div class="products__background"></div>
             </a>
           </article>
-          <article>
+          <article class="products__cards">
             <a href="#">
               <h4>Монтаж печатных плат</h4>
+              <picture>
+                <source type="image/webp" media="(max-width: 769px)"
+                  srcset="img/cards/card-2-mobile@1x.webp 1x, img/cards/card-2-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/cards/card-2-tablet@1x.webp 1x, img/cards/card-2-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/cards/card-2-desktop@1x.webp 1x, img/cards/card-2-desktop@2x.webp 2x">
+
+                <!-- 1х: 350px; 2x: 700px -->
+                <img src="img/cards/card-2-desktop@1x.jpg" srcset="img/cards/card-2-desktop@2x.jpg 2x"
+                  alt="Процессор на плате." width="350" height="650">
+              </picture>
+              <div class="products__background"></div>
             </a>
           </article>
-          <article>
+          <article class="products__cards">
             <a href="#">
               <h4>Комплектующие для светотехники</h4>
+              <picture>
+                <source type="image/webp" media="(max-width: 769px)"
+                  srcset="img/cards/card-3-mobile@1x.webp 1x, img/cards/card-3-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/cards/card-3-tablet@1x.webp 1x, img/cards/card-3-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/cards/card-3-desktop@1x.webp 1x, img/cards/card-3-desktop@2x.webp 2x">
+
+                <!-- 1х: 350px; 2x: 700px -->
+                <img src="img/cards/card-3-desktop@1x.jpg" srcset="img/cards/card-3-desktop@2x.jpg 2x"
+                  alt="Конденсаторы на плате." width="350" height="650">
+              </picture>
+              <div class="products__background"></div>
             </a>
           </article>
         </div>
       </div>
     </section>
-    <section>
-      <div>
-        <h3>Остались вопросы? Задайте их нам!</h3>
-        <p>Мы проконсультируем Вас бесплатно</p>
-      </div>
-      <div>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div>
-            <label for="name"></label>
-            <input type="text" id="name" name="username" placeholder="Имя" required>
-          </div>
-          <div>
-            <label for="phone"></label>
-            <input type="tel" id="phone" name="userphone" maxlength="11" placeholder="Телефон"
-              aria-label="Впишите номер вашего телефона." required>
-          </div>
-          <div>
-            <label for="question"></label>
-            <input type="text" id="question" name="userquestion" placeholder="Ваш вопрос">
-          </div>
-          <button type="submit">Задать вопрос</button>
-          <div class="form__agreement">
-            <label for="agreement">
-              <input id="agreement" type="checkbox" name="useragreement" required
-                aria-label="Выберете если согласны на обработку персональных данных.">
-              <span class="form__control-mark"></span>
-              <span>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</span>
-              <svg class="form__svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 2.5 5.3 7 11 1" stroke="#ffffff" /></svg>
-            </label>
-          </div>
-        </form>
+    <section class="question-form">
+      <div class="question-form__wrapper container">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)"
+            srcset="img/paper-airplane@1x.webp 1x, img/paper-airplane@2x.webp 2x">
+
+          <!-- 1х: 510px; 2x: 1020px -->
+          <img src="img/paper-airplane@1x.png" srcset="img/paper-airplane@2x.png 2x" alt="Бумажный самолет." width="510"
+            height="285">
+        </picture>
+        <div id="form" class="question-form__inner">
+          <h3>Остались вопросы? Задайте их нам!</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <form class="question-form__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="question-form__name-wrapper">
+              <label for="name"></label>
+              <input type="text" id="name" name="username" placeholder="Имя" required>
+            </div>
+            <div class="question-form__phone-wrapper">
+              <label for="phone"></label>
+              <input type="tel" id="phone" name="userphone" maxlength="11" placeholder="Телефон"
+                aria-label="Впишите номер вашего телефона." required>
+            </div>
+            <div class="question-form__question-wrapper">
+              <label for="question"></label>
+              <textarea type="text" id="question" name="userquestion" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <button type="submit">Задать вопрос</button>
+            <div class="question-form__agreement-wrapper">
+              <label for="agreement">
+                <input class="visually-hidden" id="agreement" type="checkbox" name="useragreement" required
+                  aria-label="Выберете если согласны на обработку персональных данных.">
+                <span class="form__control-mark"></span>
+                <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 2.3 3.8 5 8 1" stroke="#fff" />
+                </svg>
+              </label>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrap container">
-      <section>
-        <h4>Контактная информация</h4>
+    <div class="footer__wrap">
+      <section class="social">
+        <h4 class="visually-hidden">Контактная информация</h4>
         <a aria-current="page">
-          <svg width="55" height="55">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-          </svg>
-          <div>
-            <h5>Smart Device</h5>
-            <p>Умные технологии</p>
-          </div>
+          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
         </a>
         <ul>
           <li>
@@ -234,34 +278,38 @@
           </li>
         </ul>
       </section>
-      <section>
+      <nav class="footer-nav">
         <h4>Разделы сайта</h4>
-        <ul>
-          <li>
-            <a href="#">О Компании</a>
-          </li>
-          <li>
-            <a href="#">Продукты</a>
-          </li>
-          <li>
-            <a href="#">Производство печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Монтаж печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Комплектующие</a>
-          </li>
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h5>Наш офис</h5>
+        <div class="footer-nav__wrapper">
+          <ul>
+            <li>
+              <a href="#">О Компании</a>
+            </li>
+            <li>
+              <a href="#">Продукты</a>
+            </li>
+            <li>
+              <a href="#">Производство печатных <br> плат</a>
+            </li>
+            <li>
+              <a href="#">Монтаж печатных плат</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Комплектующие</a>
+            </li>
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="contacts">
+        <h4>Наш офис</h4>
         <address>г. Мытищи, Олимпийский проспект, д.10</address>
         <ul>
           <li>
@@ -278,7 +326,7 @@
     </div>
   </footer>
 
-  <div class="modal">
+  <!--  <div class="modal">
     <h2>Закажите звонок</h2>
     <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
     <button type="button" class="close">
@@ -311,7 +359,7 @@
         </label>
       </div>
     </form>
-  </div>
+  </div> -->
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

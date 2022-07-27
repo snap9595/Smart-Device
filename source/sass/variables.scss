@@ -1,10 +1,18 @@
 // Colors
-
+$color-whisper-grey: #ebebeb;
+$color-alice-blue: #f2f5f7;
 $color-sky-blue: #00b2ff;
+$color-deep-sky-blue: #00b3ff;
 $color-black-pearl: #041827;
+$color-darken-black-pearl: #041427;
+
+$color-darken-black-pearl--15: rgba(4, 20, 39, 0.15);
+$color-darken-black-pearl--50: rgba(4, 20, 39, 0.5);
+$color-white--70: rgba(255, 255, 255, 0.7);
+$color-white--80: rgba(255, 255, 255, 0.8);
+$color-alice-blue--70: rgba(248, 253, 255, 0.7);
 
 // Default
-
 
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
@@ -17,8 +25,8 @@ $color-torch-red:                   #ff1553;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
+$blue-to-bottom:                    linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+$pearl-to-right:                    linear-gradient(140deg, $color-darken-black-pearl--50 40%, $color-deep-sky-blue 40%);
 // Typography
 // ---------------------------------
 
@@ -29,7 +37,7 @@ $fz-default:                        1rem;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-default:                         "PT Mono", "Courier New", "Courier", monospace;
 
-$ff-roboto-condensed:                    "Roboto Condensed", "Arial", sans-serif;
+$ff-roboto-condensed:                "Roboto Condensed", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------

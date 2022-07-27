@@ -1,0 +1,111 @@
+.question-form {
+  background: $pearl-to-right;
+}
+
+.question-form__wrapper img {
+  display: block;
+  object-fit: cover;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.question-form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 170px;
+  padding-bottom: 200px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
+}
+
+.question-form__inner {
+  max-width: 420px;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+}
+
+.question-form__inner h3 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 142%;
+}
+
+.question-form__inner p {
+  line-height: 138%;
+}
+
+.question-form__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.question-form__form input,
+.question-form__form textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 15px;
+  color: $color-default-white;
+  background-color: $color-darken-black-pearl--15;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+}
+
+/* .question-form__name-wrapper {
+  color: $color-default-white;
+} */
+
+/* .question-form__phone-wrapper {} */
+
+.question-form__question-wrapper {
+  grid-column: span 2;
+  min-height: 155px;
+}
+
+.question-form__question-wrapper textarea {
+  width: 100%;
+  min-height: 155px;
+  padding: 25px 15px;
+  line-height: 138%;
+}
+
+.question-form__form button {
+  min-height: 45px;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 3px;
+  line-height: 118%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.question-form__agreement-wrapper label {
+  display: flex;
+  align-items: center;
+}
+
+.question-form__agreement-wrapper input {
+  width: min-content;
+}
+
+.question-form__agreement-wrapper span {
+  font-size: 0.88rem;
+  line-height: 114%;
+  color: $color-white--80;
+}

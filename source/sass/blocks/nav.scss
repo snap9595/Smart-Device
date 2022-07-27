@@ -1,3 +1,91 @@
-nav {
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 21px;
+}
+
+.nav img {
+  width: 215px;
+  height: 55px;
+
+  @include vp-769 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* .nav__link {
+  display: flex;
+} */
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__list a {
   display: block;
+}
+
+.nav__wrapper {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.nav__wrapper p {
+  margin-bottom: 0;
+  font-size: 1.57rem;
+  line-height: 116%;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  color: $color-alice-blue;
+  text-transform: none;
+}
+
+.nav__wrapper span {
+  display: block;
+  color: $color-white--70;
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 114%;
+  text-transform: none;
+}
+
+.nav__list span {
+  color: $color-alice-blue;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 113%;
+  text-transform: none;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.nav .nav__button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: $color-alice-blue;
+  font-size: 0.88rem;
+  line-height: 114%;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+  user-select: none;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
