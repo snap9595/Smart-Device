@@ -15,19 +15,14 @@
 
 <body class="body">
   <header class="header">
-    <nav class="header__wrap container">
-      <div>
-        <a aria-current="page">
-          <svg width="55" height="55">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-          </svg>
-          <div>
-            <h3>Smart Device</h3>
-            <p>Умные технологии</p>
-          </div>
-        </a>
-      </div>
-      <ul>
+    <nav class="nav container">
+      <a aria-current="page">
+        <picture>
+          <source media="(max-width: 769px)" srcset="./img/svg/logo-short.svg">
+          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
+        </picture>
+      </a>
+      <ul class="nav__list">
         <li>
           <a href="#">
             <svg width="20" height="20">
@@ -45,18 +40,55 @@
           </a>
         </li>
       </ul>
-      <a href="#">Заказать звонок</a>
+      <a class="nav__button" data-open-modal="feedback" href="modal.html">Заказать звонок</a>
     </nav>
   </header>
   <main class="main">
-    <section>
-      <h3 class="visually-hidden">Печатные платы</h3>
-      <h2>Печатные платы</h2>
-    </section>
+    <div class="modal is-active">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2>Закажите звонок</h2>
+          <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+          <input class="visually-hidden" id="modal-input-first">
+          <button type="button" class="modal__close-btn">
+            <span class="visually-hidden">Закрыть.</span>
+          </button>
+          <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal__name-wrapper">
+              <label for="modal-name"></label>
+              <input class="asfeas" type="text" id="modal-name" name="username" placeholder="Имя" required>
+            </div>
+            <div class="modal__phone-wrapper">
+              <label for="modal-phone"></label>
+              <input type="tel" id="modal-phone" name="userphone" maxlength="11" placeholder="Телефон"
+                aria-label="Впишите номер вашего телефона." required>
+            </div>
+            <div class="modal__question-wrapper">
+              <label for="modal-question"></label>
+              <textarea id="modal-question" name="userquestion" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <button type="submit">Отправить</button>
+            <div class="modal__agreement">
+              <label for="modal-agreement">
+                <input class="visually-hidden" id="modal-agreement" type="checkbox" name="useragreement" required
+                  aria-label="Выберете если согласны на обработку персональных данных.">
+                <span>Я&nbsp;согласен на&nbsp;обработку&ensp; персональных данных</span>
+                <span class="control-mark"></span>
+                <svg class="modal__svg" width="9" height="6" viewBox="0 0 9 6" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 2.3 3.8 5 8 1" stroke="#fff" />
+                </svg>
+              </label>
+            </div>
+          </form>
+          <input class="visually-hidden" id="modal-input-last">
+        </div>
+      </div>
+    </div>
 
   </main>
   <footer class="footer">
-    <div class="container"></div>
   </footer>
 
   <script src="js/vendor.min.js"></script>

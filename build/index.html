@@ -40,7 +40,7 @@
           </a>
         </li>
       </ul>
-      <a class="nav__button" href="#">Заказать звонок</a>
+      <a class="nav__button" data-open-modal="feedback" href="modal.html">Заказать звонок</a>
     </nav>
   </header>
   <main class="main">
@@ -49,8 +49,11 @@
     <section class="boards">
       <div class="boards__wrapper container">
         <h2>Печатные платы</h2>
-        <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-        <a href="#form">Получить бесплатную консультацию</a>
+        <p>производство и&nbsp;монтаж, поставка комплектующих, <br> блоков и&nbsp;модулей</p>
+        <a href="#form">
+          <span class="boards__span-desktop">Получить бесплатную консультацию</span>
+          <span class="boards__span-mobile">Бесплатная консультация</span>
+        </a>
       </div>
     </section>
     <section class="advantages">
@@ -65,7 +68,7 @@
             <p>
               Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
               и&nbsp;доставлять
-              заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки.
+              заказы плат и комплектующих в&nbsp;самые короткие сроки.
             </p>
           </li>
           <li class="advantages__item">
@@ -78,22 +81,22 @@
               Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--detective">
             <svg width="35" height="35">
               <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
             </svg>
-            <h4>Полная конфиденциальность</h4>
+            <h4 class="advantages__title">Полная конфиденциальность</h4>
             <p>
-              По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
+              По&nbsp;желанию клиента &ensp;мы обеспечиваем полную конфиденциальность.
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--tag">
             <svg width="35" height="35">
               <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
             </svg>
-            <h4>Персонализация стоимости</h4>
+            <h4 class="advantages__title">Персонализация стоимости</h4>
             <p>
-              Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая
+              Мы &ensp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая
               Вас устраивает.
             </p>
           </li>
@@ -107,17 +110,16 @@
         <h3>О компании</h3>
         <p>
           Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
-          технологии
-          с&nbsp;1997
-          года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
+          технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до&nbsp;10&nbsp;дней.
         </p>
         <p>
-          Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-          Печатные
-          платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
-          РоссАвтоПрома
-          (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+          Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+          REFOND.<span class="about-us__text-hidden is-nojs"> Печатные платы и&nbsp;комплектующие Service Devices
+            применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
+            (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
+            России.</span>
         </p>
+
         <div class="about-us__inner is-nojs">
           <p>
             Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
@@ -133,7 +135,7 @@
             Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
           </p>
         </div>
-        <button href="#" data-text-button="button">Подробнее</button>
+        <button data-text-button="button">Подробнее</button>
       </div>
     </section>
 
@@ -147,7 +149,7 @@
         <div class="products__inner">
           <article class="products__cards">
             <a href="#">
-              <h4>Производство печатных плат</h4>
+              <h4>Производство <br> печатных плат</h4>
               <picture>
                 <source type="image/webp" media="(max-width: 769px)"
                   srcset="img/cards/card-1-mobile@1x.webp 1x, img/cards/card-1-mobile@2x.webp 2x">
@@ -165,7 +167,7 @@
           </article>
           <article class="products__cards">
             <a href="#">
-              <h4>Монтаж печатных плат</h4>
+              <h4>Монтаж <br> печатных плат</h4>
               <picture>
                 <source type="image/webp" media="(max-width: 769px)"
                   srcset="img/cards/card-2-mobile@1x.webp 1x, img/cards/card-2-mobile@2x.webp 2x">
@@ -183,7 +185,7 @@
           </article>
           <article class="products__cards">
             <a href="#">
-              <h4>Комплектующие для светотехники</h4>
+              <h4>Комплектующие <br> для светотехники</h4>
               <picture>
                 <source type="image/webp" media="(max-width: 769px)"
                   srcset="img/cards/card-3-mobile@1x.webp 1x, img/cards/card-3-mobile@2x.webp 2x">
@@ -215,7 +217,7 @@
         <div id="form" class="question-form__inner">
           <h3>Остались вопросы? Задайте их нам!</h3>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <form class="question-form__form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="question-form__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="question-form__name-wrapper">
               <label for="name"></label>
               <input type="text" id="name" name="username" placeholder="Имя" required>
@@ -227,16 +229,17 @@
             </div>
             <div class="question-form__question-wrapper">
               <label for="question"></label>
-              <textarea type="text" id="question" name="userquestion" placeholder="Ваш вопрос"></textarea>
+              <textarea id="question" name="userquestion" placeholder="Ваш вопрос"></textarea>
             </div>
             <button type="submit">Задать вопрос</button>
             <div class="question-form__agreement-wrapper">
               <label for="agreement">
-                <input class="visually-hidden" id="agreement" type="checkbox" name="useragreement" required
-                  aria-label="Выберете если согласны на обработку персональных данных.">
-                <span class="form__control-mark"></span>
+                <input class="visually-hidden" id="agreement" type="checkbox" name="useragreement"
+                  aria-label="Выберете если согласны на обработку персональных данных." required checked>
                 <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span class="control-mark"></span>
+                <svg class="question-form__svg" width="9" height="6" viewBox="0 0 9 6" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 2.3 3.8 5 8 1" stroke="#fff" />
                 </svg>
               </label>
@@ -278,9 +281,9 @@
           </li>
         </ul>
       </section>
-      <nav class="footer-nav">
-        <h4>Разделы сайта</h4>
-        <div class="footer-nav__wrapper">
+      <nav data-menu="menu" class="footer-nav is-nojs">
+        <h4 data-menu-button="button" class="title">Разделы сайта</h4>
+        <div data-menu-wrap="menu" class="footer-nav__wrapper ">
           <ul>
             <li>
               <a href="#">О Компании</a>
@@ -308,58 +311,68 @@
           </ul>
         </div>
       </nav>
-      <section class="contacts">
-        <h4>Наш офис</h4>
-        <address>г. Мытищи, Олимпийский проспект, д.10</address>
-        <ul>
-          <li>
-            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-          </li>
-          <li>
-            <a href="tel:+79253895829">+7 (925) 389-58-29</a>
-          </li>
-          <li>
-            <a href="tel:+79253647813">+7 (925) 364-78-13</a>
-          </li>
-        </ul>
+      <section data-menu="menu" class="contacts is-nojs">
+        <h4 data-menu-button="button" class="title">Наш офис</h4>
+        <div data-menu-wrap="menu" class="contacts__wrapper ">
+          <address>г. Мытищи, Олимпийский проспект, д.10</address>
+          <ul>
+            <li>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
+            <li>
+              <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+            </li>
+            <li>
+              <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   </footer>
 
-  <!--  <div class="modal">
-    <h2>Закажите звонок</h2>
-    <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-    <button type="button" class="close">
-      <span class="visually-hidden">Закрыть.</span>
-    </button>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div>
-        <label for="name"></label>
-        <input type="text" id="name" name="username" placeholder="Имя" required>
+  <div class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <h2>Закажите звонок</h2>
+        <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+        <input class="visually-hidden" id="modal-input-first">
+        <button type="button" class="modal__close-btn">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="modal__name-wrapper">
+            <label for="modal-name"></label>
+            <input class="asfeas" type="text" id="modal-name" name="username" placeholder="Имя" required>
+          </div>
+          <div class="modal__phone-wrapper">
+            <label for="modal-phone"></label>
+            <input type="tel" id="modal-phone" name="userphone" maxlength="11" placeholder="Телефон"
+              aria-label="Впишите номер вашего телефона." required>
+          </div>
+          <div class="modal__question-wrapper">
+            <label for="modal-question"></label>
+            <textarea id="modal-question" name="userquestion" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <button type="submit">Отправить</button>
+          <div class="modal__agreement">
+            <label for="modal-agreement">
+              <input class="visually-hidden" id="modal-agreement" type="checkbox" name="useragreement" required
+                aria-label="Выберете если согласны на обработку персональных данных.">
+              <span>Я&nbsp;согласен на&nbsp;обработку&ensp; персональных данных</span>
+              <span class="control-mark"></span>
+              <svg class="modal__svg" width="9" height="6" viewBox="0 0 9 6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 2.3 3.8 5 8 1" stroke="#fff" />
+              </svg>
+            </label>
+          </div>
+        </form>
+        <input class="visually-hidden" id="modal-input-last">
       </div>
-      <div>
-        <label for="phone"></label>
-        <input type="tel" id="phone" name="userphone" maxlength="11" placeholder="Телефон"
-          aria-label="Впишите номер вашего телефона." required>
-      </div>
-      <div>
-        <label for="question"></label>
-        <input type="text" id="question" name="userquestion" placeholder="Ваш вопрос">
-      </div>
-      <button type="submit">Задать вопрос</button>
-      <div class="form__agreement">
-        <label for="agreement">
-          <input id="agreement" type="checkbox" name="useragreement" required
-            aria-label="Выберете если согласны на обработку персональных данных.">
-          <span class="form__control-mark"></span>
-          <span>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</span>
-          <svg class="form__svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 2.5 5.3 7 11 1" stroke="#ffffff" /></svg>
-        </label>
-      </div>
-    </form>
-  </div> -->
+    </div>
+  </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

@@ -38,34 +38,63 @@
 
 .boards__wrapper {
   min-height: 880px;
+  padding-left: 125px;
   color: $color-alice-blue;
   font-family: $ff-roboto-condensed;
   text-transform: uppercase;
+
+  @include vp-1023 {
+    min-height: 640px;
+  }
+
+  @include vp-769 {
+    min-height: 560px;
+  }
 }
 
 .boards__wrapper h2 {
-  padding-top: 300px;
+  margin: 0;
+  padding-top: 303px;
   font-weight: 700;
   font-size: 5rem;
   line-height: 118%;
   letter-spacing: 0.07em;
 
+  @include vp-1023 {
+    padding-top: 180px;
+    font-size: 4rem;
+    line-height: 117%;
+  }
+
   @include vp-769 {
+    padding-top: 150px;
     font-size: 2.25rem;
     line-height: 117%;
   }
 }
 
 .boards__wrapper p {
+  margin: 0;
+  margin-top: 33px;
   font-family: $ff-default;
   font-size: 1.38rem;
   line-height: 155%;
   text-transform: none;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-769 {
+    margin-top: 7px;
+    font-size: 0.88rem;
+  }
 }
 
 .boards__wrapper a {
+  margin-top: 47px;
   display: inline-block;
-  padding: 15px 25px;
+  padding: 17px 26px;
   vertical-align: middle;
   color: $color-alice-blue;
   background-color: $color-sky-blue;
@@ -75,4 +104,43 @@
   letter-spacing: 0.05em;
   border-radius: 3px;
   user-select: none;
+
+  @include vp-1023 {
+    margin-top: 57px;
+    margin-left: 45px;
+  }
+
+  @include vp-769 {
+    display: block;
+    max-width: 300px;
+    padding: 12px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 0.88rem;
+    line-height: 114%;
+  }
+}
+
+.boards__span-desktop {
+  display: block;
+
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.boards__span-mobile {
+  display: none;
+
+  @include vp-769 {
+    display: block;
+  }
+}
+
+@include vp-769 {
+  .boards br {
+    display: none;
+  }
 }

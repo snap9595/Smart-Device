@@ -2,8 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 21px;
+
+  @include vp-1023 {
+    padding-top: 20px;
+  }
+
+  @include vp-769 {
+    padding-top: 15px;
+  }
 }
 
 .nav img {
@@ -16,48 +24,58 @@
   }
 }
 
-/* .nav__link {
-  display: flex;
-} */
-
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  column-gap: 120px;
   padding: 0;
   padding-top: 15px;
   padding-bottom: 15px;
   margin: 0;
+  margin-right: 4px;
   list-style: none;
+
+  @include vp-1023 {
+    justify-content: flex-end;
+    max-width: 360px;
+    gap: 15px 30px;
+    padding-top: 5px;
+    margin: 0;
+    margin-right: 25px;
+  }
+
+  @include vp-769 {
+    max-width: 210px;
+    padding-top: 0;
+    margin-right: 14px;
+  }
 }
 
 .nav__list a {
-  display: block;
+  display: inline-grid;
+  grid-template-rows: min-content;
+  grid-auto-flow: column;
+  column-gap: 15px;
+
+  @include vp-1023 {
+    width: 30px;
+    height: 30px;
+    grid-template-rows: 1fr;
+    padding: 5px;
+  }
+}
+
+.nav__list svg,
+.nav__list span {
+  align-self: center;
 }
 
 .nav__wrapper {
   @include vp-1023 {
     display: none;
   }
-}
-
-.nav__wrapper p {
-  margin-bottom: 0;
-  font-size: 1.57rem;
-  line-height: 116%;
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
-  color: $color-alice-blue;
-  text-transform: none;
-}
-
-.nav__wrapper span {
-  display: block;
-  color: $color-white--70;
-  font-weight: 500;
-  font-size: 0.88rem;
-  line-height: 114%;
-  text-transform: none;
 }
 
 .nav__list span {
@@ -73,9 +91,11 @@
 }
 
 .nav .nav__button {
-  margin-top: 10px;
-  padding: 10px 15px;
+  margin-top: 6px;
+  margin-right: 60px;
+  padding: 8px 16px 10px;
   color: $color-alice-blue;
+  font-family: $ff-roboto-condensed;
   font-size: 0.88rem;
   line-height: 114%;
   font-weight: 700;
@@ -89,3 +109,10 @@
     display: none;
   }
 }
+
+/* @include vp-1023 {
+  .nav__list svg {
+    padding: 5px;
+  }
+}
+ */

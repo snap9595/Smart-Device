@@ -2,12 +2,22 @@
   position: relative;
   margin-top: 120px;
   display: flex;
+
+  @include vp-1023 {
+    margin-top: 75px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-769 {
+    margin-top: 48px;
+    padding-bottom: 43px;
+  }
 }
 
 .about-us h2 {
   position: absolute;
-  top: 80px;
-  left: 45px;
+  top: 52px;
+  left: -66px;
   margin: 0;
   display: inline-block;
   vertical-align: middle;
@@ -24,13 +34,24 @@
   transform: rotate(-90deg);
   user-select: none;
 
+  @include vp-1023 {
+    top: 57px;
+    left: -22px;
+  }
+
   @include vp-769 {
     display: none;
   }
 }
 
 .about-us__wrapper {
-  margin-left: 300px;
+  margin-left: 250px;
+  padding-bottom: 81px;
+
+  @include vp-1023 {
+    margin-left: 175px;
+    padding-bottom: 40px;
+  }
 
   @include vp-769 {
     margin-left: 0;
@@ -38,22 +59,43 @@
 }
 
 .about-us__wrapper h3 {
+  margin: 0;
+  margin-bottom: 1px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 2.25rem;
   line-height: 51px;
   color: $color-black-pearl;
+
+  @include vp-769 {
+    font-size: 1.75rem;
+    line-height: 140%;
+  }
 }
 
-.about-us__wrapper p {
+.about-us__wrapper p,
+.about-us__wrapper span {
+  margin-top: 8px;
+  margin-bottom: 20px;
   line-height: 138%;
+
+  @include vp-1023 {
+    margin: 12px 0 18px;
+  }
+
+  @include vp-769 {
+    margin: 15px 0;
+    font-size: 0.88rem;
+    line-height: 134%;
+  }
 }
 
 .about-us__wrapper button {
   display: none;
-  vertical-align: middle;
   min-width: 180px;
-  padding: 8px 12px;
+  padding: 13px 12px;
+  margin-top: 23px;
+  vertical-align: middle;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 0.88rem;
@@ -67,6 +109,15 @@
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-769 {
+    min-width: 160px;
+    padding: 7px 12px;
+  }
 
   &:hover {
     background-color: $color-whisper-grey;
@@ -83,4 +134,15 @@
 
 .is-active p {
   display: block;
+}
+
+@include vp-769 {
+  .about-us__text-hidden {
+    display: none;
+  }
+
+  .about-us__wrapper .is-nojs,
+  .about-us__wrapper .is-active {
+    display: inline;
+  }
 }

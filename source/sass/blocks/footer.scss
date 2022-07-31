@@ -21,12 +21,15 @@
   @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
-    gap: 10px 30px;
+    gap: 10px 15px;
     padding: 0 50px;
+    padding-left: 50px;
+    padding-right: 45px;
   }
 
   @include vp-769 {
     grid-template-columns: 1fr;
+    gap: 0;
     padding: 0;
   }
 }
@@ -42,4 +45,8 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-default-white;
+
+  @include vp-769 {
+    margin: 0;
+  }
 }

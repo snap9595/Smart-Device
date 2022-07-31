@@ -1,10 +1,19 @@
 .question-form {
   background: $pearl-to-right;
+
+  @include vp-1023 {
+    background: $color-deep-sky-blue;
+  }
 }
 
 .question-form__wrapper img {
   display: block;
+  margin-top: 100px;
   object-fit: cover;
+
+  @include vp-1279 {
+    padding-right: 25px;
+  }
 
   @include vp-1023 {
     display: none;
@@ -14,42 +23,86 @@
 .question-form__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 170px;
-  padding-bottom: 200px;
+  align-items: flex-start;
+  padding-top: 145px;
+  padding-bottom: 248px;
   color: $color-default-white;
 
   @include vp-1023 {
     flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 126px;
+  }
+
+  @include vp-769 {
+    padding-bottom: 88px;
   }
 }
 
 .question-form__inner {
-  max-width: 420px;
+  max-width: 590px;
 
   @include vp-1023 {
-    max-width: 100%;
+    min-width: 100%;
   }
 }
 
 .question-form__inner h3 {
+  margin: 0;
+  margin-top: 20px;
+  margin-left: -5px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 2.25rem;
   line-height: 142%;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+
+  @include vp-769 {
+    margin-top: 21px;
+    font-size: 1.88rem;
+    line-height: 140%;
+  }
 }
 
 .question-form__inner p {
+  margin: 0;
+  margin-top: 13px;
   line-height: 138%;
+
+  @include vp-1023 {
+    margin-top: 6px;
+  }
+
+  @include vp-769 {
+    margin-top: 9px;
+    font-size: 0.88rem;
+    line-height: 134%;
+  }
 }
 
 .question-form__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 30px;
+  column-gap: 30px;
+  margin-top: 15px;
+  padding-right: 10px;
+
+  @include vp-1023 {
+    margin-top: 6px;
+    padding-right: 0;
+  }
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+  }
 }
 
-.question-form__form input,
-.question-form__form textarea {
+.form input,
+.form textarea {
   width: 100%;
   min-height: 50px;
   padding: 15px;
@@ -63,26 +116,36 @@
   }
 }
 
-/* .question-form__name-wrapper {
-  color: $color-default-white;
-} */
-
-/* .question-form__phone-wrapper {} */
-
 .question-form__question-wrapper {
   grid-column: span 2;
   min-height: 155px;
+
+  @include vp-769 {
+    grid-column: 1/2;
+  }
 }
 
-.question-form__question-wrapper textarea {
+.form textarea {
   width: 100%;
   min-height: 155px;
   padding: 25px 15px;
   line-height: 138%;
+  resize: none;
+
+  @include vp-1023 {
+    padding: 30px 15px;
+  }
+
+  @include vp-769 {
+    padding: 25px 15px;
+    min-height: 182px;
+  }
 }
 
-.question-form__form button {
-  min-height: 45px;
+.form button {
+  margin-top: 30px;
+  margin-right: 10px;
+  padding: 12px 10px;
   color: $color-default-white;
   background-color: $color-black-pearl;
   font-family: $ff-roboto-condensed;
@@ -93,11 +156,51 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   user-select: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-darken-black-pearl--50;
+  }
+
+  @include vp-1023 {
+    margin-top: 30px;
+    margin-right: 55px;
+    padding: 15px 10px 7px;
+  }
+
+  @include vp-769 {
+    width: 100%;
+    margin-top: 24px;
+    margin-right: 0;
+    padding: 14px 10px 7px;
+  }
 }
 
-.question-form__agreement-wrapper label {
-  display: flex;
+.form label {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.question-form__agreement-wrapper {
+  margin-top: 44px;
+  margin-left: 5px;
+
+  @include vp-1023 {
+    margin-top: 39px;
+    margin-left: 0;
+  }
+
+  @include vp-769 {
+    margin-top: 24px;
+  }
 }
 
 .question-form__agreement-wrapper input {
@@ -105,7 +208,40 @@
 }
 
 .question-form__agreement-wrapper span {
+  margin-left: 30px;
   font-size: 0.88rem;
   line-height: 114%;
   color: $color-white--80;
+
+  @include vp-1023 {
+    margin-left: 25px;
+  }
+
+  @include vp-769 {
+    margin-left: 30px;
+  }
+}
+
+.form svg {
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  opacity: 0;
+
+  @include vp-1023 {
+    left: 3px;
+  }
+
+  @include vp-769 {
+    top: 11px;
+    left: 8px;
+  }
+}
+
+.question-form__agreement-wrapper input:checked ~ .question-form__svg {
+  opacity: 1;
+}
+
+.question-form__agreement-wrapper input:focus ~ .control-mark::before {
+  border: 1px solid $color-black-pearl;
 }

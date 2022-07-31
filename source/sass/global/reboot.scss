@@ -91,3 +91,50 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+@include vp-769 {
+  .title::before {
+    position: absolute;
+    content: "";
+    top: 27px;
+    right: 26px;
+    width: 15px;
+    height: 1px;
+    background-color: $color-alice-blue;
+  }
+
+  .title::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 33px;
+    width: 1px;
+    height: 15px;
+    background-color: $color-alice-blue;
+  }
+
+  .is-nojs .title::after,
+  .is-nojs .title::before {
+    display: none;
+  }
+}
+
+.control-mark::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 4px;
+
+  @include vp-1023 {
+    left: 0;
+  }
+
+  @include vp-769 {
+    left: 5px;
+  }
+}
