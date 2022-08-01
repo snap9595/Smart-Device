@@ -7,8 +7,8 @@ let close = document.querySelector('.modal__close-btn');
 let overlay = document.querySelector('[data-close-modal]');
 let nameInput = document.querySelector('#modal-name');
 let agreementInput = document.querySelector('#modal-agreement');
-const inputFirst = document.querySelector('#modal-input-first');
-const inputLast = document.querySelector('#modal-input-last');
+let inputFirst = document.querySelector('#modal-input-first');
+let inputLast = document.querySelector('#modal-input-last');
 
 const addModal = () => {
   const isEscapeKey = (evt) => evt.key === 'Escape';

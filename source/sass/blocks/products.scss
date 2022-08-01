@@ -4,10 +4,10 @@
 
 .products__wrapper {
   padding-top: 62px;
-  padding-bottom: 140px;
+  padding-bottom: 141px;
 
   @include vp-1023 {
-    padding-top: 55px;
+    padding-top: 56px;
     padding-bottom: 76px;
   }
 
@@ -137,10 +137,7 @@
   position: relative;
   z-index: 3;
   margin: 0;
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-right: 140px;
-  padding-bottom: 15px;
+  padding: 48px 140px 15px 38px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 1.25rem;

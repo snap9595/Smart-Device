@@ -1,9 +1,15 @@
 .question-form {
+  min-height: 840px;
   background: $pearl-to-right;
 
   @include vp-1023 {
+    min-height: 580px;
     background: $color-deep-sky-blue;
   }
+
+    @include vp-767 {
+      min-height: 750px;
+    }
 }
 
 .question-form__wrapper img {
@@ -25,17 +31,17 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 145px;
-  padding-bottom: 237px;
+  padding-bottom: 200px;
   color: $color-default-white;
 
   @include vp-1023 {
     flex-direction: column;
     padding-top: 25px;
-    padding-bottom: 118px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-bottom: 88px;
+    padding-bottom: 50px;
   }
 }
 
@@ -50,7 +56,7 @@
 .question-form__inner h3 {
   margin: 0;
   margin-top: 20px;
-  margin-left: -5px;
+  margin-left: -7px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 2.25rem;
@@ -88,7 +94,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   margin-top: 15px;
-  padding-right: 10px;
+  padding-right: 12px;
 
   @include vp-1023 {
     margin-top: 6px;
@@ -111,7 +117,7 @@
 }
 
 .question-form__agreement-wrapper {
-  margin-top: 45px;
+  margin-top: 43px;
   margin-left: 5px;
 
   @include vp-1023 {
@@ -120,7 +126,7 @@
   }
 
   @include vp-767 {
-    margin-top: 15px;
+    margin-top: 12px;
   }
 }
 

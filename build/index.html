@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Описание проекта">
+  <meta name="description" content="Производство печатных плат">
   <title>Smart Device</title>
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
@@ -19,7 +19,7 @@
       <a aria-current="page">
         <picture>
           <source media="(max-width: 767px)" srcset="./img/svg/logo-short.svg">
-          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
+          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device.">
         </picture>
       </a>
       <ul class="nav__list">
@@ -43,9 +43,9 @@
       <a class="nav__button" data-open-modal="feedback" href="modal.html">Заказать звонок</a>
     </nav>
   </header>
+
   <main class="main">
     <h1 class="visually-hidden">Сайт печатных плат Smart Device</h1>
-
     <section class="boards">
       <div class="boards__wrapper container">
         <h2>Печатные платы</h2>
@@ -250,12 +250,13 @@
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="footer__wrap">
       <section class="social">
         <h4 class="visually-hidden">Контактная информация</h4>
         <a aria-current="page">
-          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
+          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device.">
         </a>
         <ul>
           <li>
@@ -283,8 +284,10 @@
         </ul>
       </section>
       <nav data-menu="menu" class="footer-nav is-nojs">
-        <h4 data-menu-button="button" class="title">Разделы сайта</h4>
-        <div data-menu-wrap="menu" class="footer-nav__wrapper ">
+        <label for="tab-button-1"></label>
+        <input id="tab-button-1" class="visually-hidden tab-button" type="checkbox" aria-label="разделы сайта.">
+        <h4 class="title">Разделы сайта</h4>
+        <div class="footer-nav__wrapper ">
           <ul>
             <li>
               <a href="#">О Компании</a>
@@ -313,8 +316,10 @@
         </div>
       </nav>
       <section data-menu="menu" class="contacts is-nojs">
-        <h4 data-menu-button="button" class="title">Наш офис</h4>
-        <div data-menu-wrap="menu" class="contacts__wrapper ">
+        <label for="tab-button-2"></label>
+        <input id="tab-button-2" class="visually-hidden tab-button" type="checkbox" aria-label="Открыть раздел Наш офис.">
+        <h4 class="title">Наш офис</h4>
+        <div class="contacts__wrapper ">
           <address>г. Мытищи, Олимпийский проспект, д.10</address>
           <ul>
             <li>
@@ -354,13 +359,15 @@
           </div>
           <div class="modal__question-wrapper">
             <label for="modal-question"></label>
-            <textarea id="modal-question" name="userquestion" placeholder="Ваш вопрос"></textarea>
+            <textarea data-textarea="textarea" id="modal-question" name="userquestion"
+              placeholder="Ваш вопрос"></textarea>
           </div>
           <button type="submit">Отправить</button>
           <div class="modal__agreement">
             <label for="modal-agreement">
-              <input class="visually-hidden" id="modal-agreement" type="checkbox" name="useragreement" required
-                aria-label="Выберете если согласны на обработку персональных данных.">
+              <input class="visually-hidden" data-checkbox="agreement-checkbox" id="modal-agreement" type="checkbox"
+                name="useragreement" required
+                aria-label="Выберете если согласны на обработку персональных данных." checked>
               <span>Я&nbsp;согласен на&nbsp;обработку&ensp; персональных данных</span>
               <span class="control-mark"></span>
               <svg class="modal__svg" width="9" height="6" viewBox="0 0 9 6" fill="none"

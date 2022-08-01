@@ -19,7 +19,7 @@
   list-style: none;
 
   @include vp-1023 {
-    gap: 30px 31px;
+    gap: 30px 28px;
   }
 
   @include vp-767 {
@@ -31,7 +31,7 @@
 .advantages__item {
   min-height: 300px;
   padding-top: 40px;
-  padding-left: 41px;
+  padding-left: 39px;
   padding-right: 40px;
   padding-bottom: 73px;
   border: 1px solid $color-whisper-grey;
@@ -118,6 +118,7 @@
 
   @include vp-1023 {
     padding-top: 38px;
+    padding-left: 42px;
   }
 }
 

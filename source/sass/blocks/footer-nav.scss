@@ -58,6 +58,10 @@
   line-height: 135%;
   vertical-align: middle;
   color: $color-white--70;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @include vp-767 {

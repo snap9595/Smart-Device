@@ -3,29 +3,21 @@
   top: 0;
   right: 0;
   bottom: 0;
-  left: -17px;
+  left: -18px;
   z-index: 1000;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   background-color: rgba($color-black-pearl, 0.8);
-  transform: scale(1.2);
-  visibility: hidden;
-  opacity: 0;
 
   transition: opacity $trans-modal,
     transform $trans-modal,
     visibility $trans-modal;
   pointer-events: none;
   -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &__wrapper {
     position: relative;
@@ -54,6 +46,10 @@
     padding-top: 37px;
     color: $color-default-white;
     background-color: $color-deep-sky-blue;
+
+    @include vp-767 {
+      padding: 20px;
+    }
   }
 
   &__close-btn {
@@ -77,10 +73,7 @@
   }
 
   &.is-active {
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
-
+    display: flex;
     pointer-events: auto;
   }
 }
@@ -117,6 +110,10 @@
   font-weight: 400;
   font-size: 1.88rem;
   line-height: 140%;
+
+  @include vp-767 {
+    margin-right: 35px;
+  }
 }
 
 .modal__content p {
@@ -126,7 +123,7 @@
 }
 
 .modal__agreement {
-  margin-top: 17px;
+  margin-top: 12px;
 }
 
 .modal__form button {

@@ -1,6 +1,7 @@
 let aboutUs = document.querySelector('.about-us__inner');
 let button = document.querySelector('[data-text-button]');
 let aboutText = document.querySelector('.about-us__text-hidden');
+
 const addDescription = () => {
   aboutUs.classList.remove('is-nojs');
   aboutText.classList.remove('is-nojs');
