@@ -11,7 +11,7 @@
     padding-bottom: 76px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-top: 48px;
     padding-bottom: 85px;
   }
@@ -30,7 +30,7 @@
   display: inline-block;
   vertical-align: middle;
 
-  @include vp-769 {
+  @include vp-767 {
     display: none;
   }
 }
@@ -38,7 +38,7 @@
 .products__span-mobile {
   display: none;
 
-  @include vp-769 {
+  @include vp-767 {
     display: inline-block;
     padding-right: 10px;
     vertical-align: middle;
@@ -63,7 +63,7 @@
     margin-top: 37px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-top: 29px;
   }
 }
@@ -71,6 +71,7 @@
 .products__cards {
   position: relative;
   min-height: 650px;
+  background-color: $color-darken-black-pearl;
 
   @include vp-1023 {
     min-height: 250px;
@@ -92,7 +93,7 @@
   border-radius: 3px 0 0 0;
   background-color: $color-sky-blue;
 
-  @include vp-769 {
+  @include vp-767 {
     width: 39px;
     height: 40px;
   }
@@ -109,7 +110,7 @@
   border-width: 0 2px 2px 0;
   transform: rotate(310deg);
 
-  @include vp-769 {
+  @include vp-767 {
     right: 18px;
     bottom: 18px;
     padding: 2px;
@@ -139,6 +140,7 @@
   padding-top: 48px;
   padding-left: 40px;
   padding-right: 140px;
+  padding-bottom: 15px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 1.25rem;
@@ -148,12 +150,13 @@
   @include vp-1023 {
     padding-top: 38px;
     padding-left: 45px;
-    padding-right: 0;
+    padding-right: 20px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-top: 25px;
     padding-left: 29px;
+    padding-right: 50px;
     font-size: 1.13rem;
     line-height: 168%;
   }

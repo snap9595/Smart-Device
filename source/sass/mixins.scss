@@ -1,5 +1,7 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -24,8 +26,8 @@
   }
 }
 
-@mixin vp-769 {
-  @media (max-width: $vp-770 - 1) {
+@mixin vp-767 {
+  @media (max-width: $vp-768 - 1) {
     @content;
   }
 }

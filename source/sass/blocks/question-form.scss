@@ -25,16 +25,16 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 145px;
-  padding-bottom: 248px;
+  padding-bottom: 237px;
   color: $color-default-white;
 
   @include vp-1023 {
     flex-direction: column;
     padding-top: 25px;
-    padding-bottom: 126px;
+    padding-bottom: 118px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-bottom: 88px;
   }
 }
@@ -60,7 +60,7 @@
     margin-left: 0;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-top: 21px;
     font-size: 1.88rem;
     line-height: 140%;
@@ -76,7 +76,7 @@
     margin-top: 6px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-top: 9px;
     font-size: 0.88rem;
     line-height: 134%;
@@ -95,24 +95,9 @@
     padding-right: 0;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     grid-template-columns: 1fr;
     margin-top: 14px;
-  }
-}
-
-.form input,
-.form textarea {
-  width: 100%;
-  min-height: 50px;
-  padding: 15px;
-  color: $color-default-white;
-  background-color: $color-darken-black-pearl--15;
-  border: none;
-  border-radius: 3px;
-
-  &::placeholder {
-    color: $color-default-white;
   }
 }
 
@@ -120,77 +105,13 @@
   grid-column: span 2;
   min-height: 155px;
 
-  @include vp-769 {
+  @include vp-767 {
     grid-column: 1/2;
   }
 }
 
-.form textarea {
-  width: 100%;
-  min-height: 155px;
-  padding: 25px 15px;
-  line-height: 138%;
-  resize: none;
-
-  @include vp-1023 {
-    padding: 30px 15px;
-  }
-
-  @include vp-769 {
-    padding: 25px 15px;
-    min-height: 182px;
-  }
-}
-
-.form button {
-  margin-top: 30px;
-  margin-right: 10px;
-  padding: 12px 10px;
-  color: $color-default-white;
-  background-color: $color-black-pearl;
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 3px;
-  line-height: 118%;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  user-select: none;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: $color-darken-black-pearl--50;
-  }
-
-  @include vp-1023 {
-    margin-top: 30px;
-    margin-right: 55px;
-    padding: 15px 10px 7px;
-  }
-
-  @include vp-769 {
-    width: 100%;
-    margin-top: 24px;
-    margin-right: 0;
-    padding: 14px 10px 7px;
-  }
-}
-
-.form label {
-  position: relative;
-  display: inline-grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
 .question-form__agreement-wrapper {
-  margin-top: 44px;
+  margin-top: 45px;
   margin-left: 5px;
 
   @include vp-1023 {
@@ -198,8 +119,8 @@
     margin-left: 0;
   }
 
-  @include vp-769 {
-    margin-top: 24px;
+  @include vp-767 {
+    margin-top: 15px;
   }
 }
 
@@ -211,37 +132,22 @@
   margin-left: 30px;
   font-size: 0.88rem;
   line-height: 114%;
+  align-self: center;
   color: $color-white--80;
 
   @include vp-1023 {
     margin-left: 25px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-left: 30px;
   }
 }
 
-.form svg {
-  position: absolute;
-  top: 11px;
-  left: 8px;
-  opacity: 0;
-
-  @include vp-1023 {
-    left: 3px;
-  }
-
-  @include vp-769 {
-    top: 11px;
-    left: 8px;
-  }
-}
-
-.question-form__agreement-wrapper input:checked ~ .question-form__svg {
+.question-form__agreement-wrapper input:checked~.question-form__svg {
   opacity: 1;
 }
 
-.question-form__agreement-wrapper input:focus ~ .control-mark::before {
+.question-form__agreement-wrapper input:focus~.control-mark::before {
   border: 1px solid $color-black-pearl;
 }

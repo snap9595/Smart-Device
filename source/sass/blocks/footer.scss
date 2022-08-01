@@ -24,10 +24,10 @@
     gap: 10px 15px;
     padding: 0 50px;
     padding-left: 50px;
-    padding-right: 45px;
+    padding-right: 42px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     grid-template-columns: 1fr;
     gap: 0;
     padding: 0;
@@ -46,7 +46,7 @@
   text-transform: uppercase;
   color: $color-default-white;
 
-  @include vp-769 {
+  @include vp-767 {
     margin: 0;
   }
 }

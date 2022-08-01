@@ -155,7 +155,7 @@
   opacity: 1;
 }
 
-.modal__agreement input:focus ~ .modal__control-mark::before {
+.modal__agreement input:focus ~ .control-mark::before {
   border: 1px solid $color-black-pearl;
 }
 

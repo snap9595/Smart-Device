@@ -5,10 +5,10 @@
 
   @include vp-1023 {
     margin-top: 75px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-top: 48px;
     padding-bottom: 43px;
   }
@@ -34,26 +34,35 @@
   transform: rotate(-90deg);
   user-select: none;
 
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
+    background-image: url("../img/about-bg-desktop@2x.png");
+  }
+
   @include vp-1023 {
     top: 57px;
     left: -22px;
+    background-image: url("../img/about-bg-tablet@1x.png");
+
+    @include retina {
+      background-image: url("../img/about-bg-tablet@2x.png");
+    }
   }
 
-  @include vp-769 {
+  @include vp-767 {
     display: none;
   }
 }
 
 .about-us__wrapper {
   margin-left: 250px;
-  padding-bottom: 81px;
+  padding-bottom: 117px;
 
   @include vp-1023 {
     margin-left: 175px;
     padding-bottom: 40px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-left: 0;
   }
 }
@@ -67,7 +76,7 @@
   line-height: 51px;
   color: $color-black-pearl;
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 1.75rem;
     line-height: 140%;
   }
@@ -83,7 +92,7 @@
     margin: 12px 0 18px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin: 15px 0;
     font-size: 0.88rem;
     line-height: 134%;
@@ -114,7 +123,7 @@
     margin-top: 0;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     min-width: 160px;
     padding: 7px 12px;
   }
@@ -136,7 +145,7 @@
   display: block;
 }
 
-@include vp-769 {
+@include vp-767 {
   .about-us__text-hidden {
     display: none;
   }

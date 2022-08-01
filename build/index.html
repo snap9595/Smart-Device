@@ -18,7 +18,7 @@
     <nav class="nav container">
       <a aria-current="page">
         <picture>
-          <source media="(max-width: 769px)" srcset="./img/svg/logo-short.svg">
+          <source media="(max-width: 767px)" srcset="./img/svg/logo-short.svg">
           <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
         </picture>
       </a>
@@ -113,7 +113,7 @@
           технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до&nbsp;10&nbsp;дней.
         </p>
         <p>
-          Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+          Наши поставщики&ensp;- мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
           REFOND.<span class="about-us__text-hidden is-nojs"> Печатные платы и&nbsp;комплектующие Service Devices
             применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
             (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
@@ -122,7 +122,7 @@
 
         <div class="about-us__inner is-nojs">
           <p>
-            Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+            Smart Device&nbsp; &ndash; это команда профессионалов. Через нас прошло более
             1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых
             продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов
             по&nbsp;всей стране и&nbsp;20
@@ -151,7 +151,7 @@
             <a href="#">
               <h4>Производство <br> печатных плат</h4>
               <picture>
-                <source type="image/webp" media="(max-width: 769px)"
+                <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/cards/card-1-mobile@1x.webp 1x, img/cards/card-1-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/cards/card-1-tablet@1x.webp 1x, img/cards/card-1-tablet@2x.webp 2x">
@@ -169,7 +169,7 @@
             <a href="#">
               <h4>Монтаж <br> печатных плат</h4>
               <picture>
-                <source type="image/webp" media="(max-width: 769px)"
+                <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/cards/card-2-mobile@1x.webp 1x, img/cards/card-2-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/cards/card-2-tablet@1x.webp 1x, img/cards/card-2-tablet@2x.webp 2x">
@@ -187,7 +187,7 @@
             <a href="#">
               <h4>Комплектующие <br> для светотехники</h4>
               <picture>
-                <source type="image/webp" media="(max-width: 769px)"
+                <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/cards/card-3-mobile@1x.webp 1x, img/cards/card-3-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/cards/card-3-tablet@1x.webp 1x, img/cards/card-3-tablet@2x.webp 2x">
@@ -224,7 +224,8 @@
             </div>
             <div class="question-form__phone-wrapper">
               <label for="phone"></label>
-              <input type="tel" id="phone" name="userphone" maxlength="11" placeholder="Телефон"
+              <input type="tel" data-tel="question-phone" id="phone" name="userphone"
+                placeholder="Телефон"
                 aria-label="Впишите номер вашего телефона." required>
             </div>
             <div class="question-form__question-wrapper">
@@ -348,7 +349,7 @@
           </div>
           <div class="modal__phone-wrapper">
             <label for="modal-phone"></label>
-            <input type="tel" id="modal-phone" name="userphone" maxlength="11" placeholder="Телефон"
+            <input type="tel" data-tel="modal-phone" id="modal-phone" name="userphone" placeholder="Телефон"
               aria-label="Впишите номер вашего телефона." required>
           </div>
           <div class="modal__question-wrapper">

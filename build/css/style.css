@@ -599,9 +599,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-column-gap: 120px;
-  -moz-column-gap: 120px;
-  column-gap: 120px;
+  gap: 10px 120px;
+  max-width: 500px;
   padding: 0;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -681,6 +680,7 @@ button,
 .boards__wrapper {
   min-height: 880px;
   padding-left: 125px;
+  padding-bottom: 20px;
   color: #f2f5f7;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
@@ -843,7 +843,7 @@ button,
 
 .about-us__wrapper {
   margin-left: 250px;
-  padding-bottom: 81px;
+  padding-bottom: 117px;
 }
 
 .about-us__wrapper h3 {
@@ -942,6 +942,7 @@ button,
 .products__cards {
   position: relative;
   min-height: 650px;
+  background-color: #041427;
 }
 
 .products__cards:hover {
@@ -996,6 +997,7 @@ button,
   padding-top: 48px;
   padding-left: 40px;
   padding-right: 140px;
+  padding-bottom: 15px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
@@ -1056,7 +1058,7 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   padding-top: 145px;
-  padding-bottom: 248px;
+  padding-bottom: 237px;
   color: #ffffff;
 }
 
@@ -1092,6 +1094,41 @@ button,
   padding-right: 10px;
 }
 
+.question-form__question-wrapper {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  min-height: 155px;
+}
+
+.question-form__agreement-wrapper {
+  margin-top: 45px;
+  margin-left: 5px;
+}
+
+.question-form__agreement-wrapper input {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.question-form__agreement-wrapper span {
+  margin-left: 30px;
+  font-size: 0.88rem;
+  line-height: 114%;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.question-form__agreement-wrapper input:checked ~ .question-form__svg {
+  opacity: 1;
+}
+
+.question-form__agreement-wrapper input:focus ~ .control-mark::before {
+  border: 1px solid #041827;
+}
+
 .form input,
 .form textarea {
   width: 100%;
@@ -1101,6 +1138,11 @@ button,
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
+}
+
+.form input:hover,
+.form textarea:hover {
+  opacity: 0.8;
 }
 
 .form input::-webkit-input-placeholder,
@@ -1128,12 +1170,6 @@ button,
   color: #ffffff;
 }
 
-.question-form__question-wrapper {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-  min-height: 155px;
-}
-
 .form textarea {
   width: 100%;
   min-height: 155px;
@@ -1143,15 +1179,18 @@ button,
 }
 
 .form button {
-  margin-top: 30px;
+  margin-top: 33px;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 12px 10px;
+  padding-top: 15px;
   color: #ffffff;
   background-color: #041827;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   border-radius: 3px;
+  border: none;
   line-height: 118%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1173,9 +1212,6 @@ button,
   display: inline-grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -1183,37 +1219,11 @@ button,
   opacity: 0.8;
 }
 
-.question-form__agreement-wrapper {
-  margin-top: 44px;
-  margin-left: 5px;
-}
-
-.question-form__agreement-wrapper input {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.question-form__agreement-wrapper span {
-  margin-left: 30px;
-  font-size: 0.88rem;
-  line-height: 114%;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .form svg {
   position: absolute;
   top: 11px;
   left: 8px;
   opacity: 0;
-}
-
-.question-form__agreement-wrapper input:checked ~ .question-form__svg {
-  opacity: 1;
-}
-
-.question-form__agreement-wrapper input:focus ~ .control-mark::before {
-  border: 1px solid #041827;
 }
 
 .footer {
@@ -1336,7 +1346,7 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .contacts li {
@@ -1530,7 +1540,7 @@ button,
   opacity: 1;
 }
 
-.modal__agreement input:focus ~ .modal__control-mark::before {
+.modal__agreement input:focus ~ .control-mark::before {
   border: 1px solid #041827;
 }
 
@@ -1550,6 +1560,10 @@ button,
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/boards-bg-desktop@2x.jpg"), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #041827), to(rgba(25, 32, 36, 0)));
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/boards-bg-desktop@2x.jpg"), -o-linear-gradient(top, #041827 100%, rgba(25, 32, 36, 0) 100%);
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/boards-bg-desktop@2x.jpg"), linear-gradient(180deg, #041827 100%, rgba(25, 32, 36, 0) 100%);
+  }
+
+  .about-us h2 {
+    background-image: url("../img/about-bg-desktop@2x.png");
   }
 }
 
@@ -1575,7 +1589,7 @@ button,
 
 @media (max-width: 1023px) {
   .control-mark::before {
-    left: 0px;
+    left: 0;
   }
 
   .container {
@@ -1599,7 +1613,7 @@ button,
     gap: 15px 30px;
     padding-top: 5px;
     margin: 0;
-    margin-right: 25px;
+    margin-right: 23px;
   }
 
   .nav__list a {
@@ -1652,7 +1666,7 @@ button,
   }
 
   .advantages__list {
-    gap: 30px 29px;
+    gap: 30px 31px;
   }
 
   .advantages__item {
@@ -1696,12 +1710,13 @@ button,
 
   .about-us {
     margin-top: 75px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
   }
 
   .about-us h2 {
     top: 57px;
     left: -22px;
+    background-image: url("../img/about-bg-tablet@1x.png");
   }
 
   .about-us__wrapper {
@@ -1737,7 +1752,7 @@ button,
   .products__cards h4 {
     padding-top: 38px;
     padding-left: 45px;
-    padding-right: 0;
+    padding-right: 20px;
   }
 
   .products__cards br {
@@ -1758,7 +1773,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 25px;
-    padding-bottom: 126px;
+    padding-bottom: 118px;
   }
 
   .question-form__inner {
@@ -1778,16 +1793,6 @@ button,
     padding-right: 0;
   }
 
-  .form textarea {
-    padding: 30px 15px;
-  }
-
-  .form button {
-    margin-top: 30px;
-    margin-right: 55px;
-    padding: 15px 10px 7px;
-  }
-
   .question-form__agreement-wrapper {
     margin-top: 39px;
     margin-left: 0;
@@ -1795,6 +1800,16 @@ button,
 
   .question-form__agreement-wrapper span {
     margin-left: 25px;
+  }
+
+  .form textarea {
+    padding: 30px 15px;
+  }
+
+  .form button {
+    margin-top: 33px;
+    margin-right: 55px;
+    padding: 15px 10px 7px;
   }
 
   .form svg {
@@ -1811,7 +1826,7 @@ button,
     gap: 10px 15px;
     padding: 0 50px;
     padding-left: 50px;
-    padding-right: 45px;
+    padding-right: 42px;
   }
 
   .social {
@@ -1880,9 +1895,13 @@ button,
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/boards-bg-tablet@2x.jpg"), -o-linear-gradient(top, #041827 100%, rgba(25, 32, 36, 0) 100%);
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/boards-bg-tablet@2x.jpg"), linear-gradient(180deg, #041827 100%, rgba(25, 32, 36, 0) 100%);
   }
+
+  .about-us h2 {
+    background-image: url("../img/about-bg-tablet@2x.png");
+  }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .title::before {
     position: absolute;
     content: "";
@@ -1955,7 +1974,7 @@ button,
 
   .boards__wrapper a {
     display: block;
-    max-width: 300px;
+    width: 100%;
     padding: 12px;
     margin-top: 45px;
     margin-left: auto;
@@ -2106,6 +2125,7 @@ button,
   .products__cards h4 {
     padding-top: 25px;
     padding-left: 29px;
+    padding-right: 50px;
     font-size: 1.13rem;
     line-height: 168%;
   }
@@ -2138,6 +2158,14 @@ button,
     grid-column: 1/2;
   }
 
+  .question-form__agreement-wrapper {
+    margin-top: 15px;
+  }
+
+  .question-form__agreement-wrapper span {
+    margin-left: 30px;
+  }
+
   .form textarea {
     padding: 25px 15px;
     min-height: 182px;
@@ -2147,15 +2175,7 @@ button,
     width: 100%;
     margin-top: 24px;
     margin-right: 0;
-    padding: 14px 10px 7px;
-  }
-
-  .question-form__agreement-wrapper {
-    margin-top: 24px;
-  }
-
-  .question-form__agreement-wrapper span {
-    margin-left: 30px;
+    padding: 14px 10px 11px;
   }
 
   .form svg {
@@ -2301,7 +2321,7 @@ button,
   }
 }
 
-@media (max-width: 769px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 769px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 769px) and (min-resolution: 144dpi), (max-width: 769px) and (min-resolution: 1.5dppx) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .boards {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/boards-bg-mobile@2x.jpg"), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #041827), to(rgba(25, 32, 36, 0)));
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/boards-bg-mobile@2x.jpg"), -o-linear-gradient(top, #041827 100%, rgba(25, 32, 36, 0) 100%);
