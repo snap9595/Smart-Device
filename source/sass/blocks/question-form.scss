@@ -144,10 +144,10 @@
   }
 }
 
-.question-form__agreement-wrapper input:checked~.question-form__svg {
+.question-form__agreement-wrapper input:checked ~ .question-form__svg {
   opacity: 1;
 }
 
-.question-form__agreement-wrapper input:focus~.control-mark::before {
+.question-form__agreement-wrapper input:focus ~ .control-mark::before {
   border: 1px solid $color-black-pearl;
 }

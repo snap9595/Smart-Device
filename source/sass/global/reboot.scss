@@ -35,16 +35,6 @@ img {
   height: auto;
 }
 
-// chrome autofill background removal
-// если на проекте у инпутов используются разные цвета фонов\текста -
-// удалите это из глобала и используйте локально с нужными цветами
-// rgba не подойдет, сконвертируйте цвет в hex без прозрачности
-// если в стилях уже используется box-shadow есть другое решение -
-// задать к списку транзишенов `background-color 10000000s ease-out`
-
-// firefox placeholder \ invalid fix + ios bdrs
-
-// ie11 X removal
 input {
 
   &::-ms-clear,
