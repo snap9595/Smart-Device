@@ -7,9 +7,9 @@
     background: $color-deep-sky-blue;
   }
 
-    @include vp-767 {
-      min-height: 750px;
-    }
+  @include vp-767 {
+    min-height: 750px;
+  }
 }
 
 .question-form__wrapper img {

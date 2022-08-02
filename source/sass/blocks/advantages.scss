@@ -10,7 +10,7 @@
   }
 }
 
-.advantages__list {
+.advantages__wrapper ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -170,11 +170,11 @@
 }
 
 @include vp-767 {
-  .advantages__list .advantages__item--detective {
+  .advantages__wrapper .advantages__item--detective {
     min-height: 325px;
   }
 
-  .advantages__list .advantages__item--tag {
+  .advantages__wrapper .advantages__item--tag {
     min-height: 324px;
   }
 }

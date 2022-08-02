@@ -24,7 +24,7 @@
   }
 }
 
-.nav__list {
+.nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -54,7 +54,7 @@
   }
 }
 
-.nav__list a {
+.nav a {
   display: inline-grid;
   grid-template-rows: min-content;
   grid-auto-flow: column;
@@ -72,18 +72,12 @@
   }
 }
 
-.nav__list svg,
-.nav__list span {
+.nav svg,
+.nav span {
   align-self: center;
 }
 
-.nav__wrapper {
-  @include vp-1023 {
-    display: none;
-  }
-}
-
-.nav__list span {
+.nav span {
   color: $color-alice-blue;
   font-weight: 400;
   font-size: 1rem;
@@ -117,4 +111,11 @@
   @include vp-1023 {
     display: none;
   }
+}
+
+.nav .nav__link {
+  display: block;
+  width: max-content;
+  height: 100%;
+  padding: 0;
 }

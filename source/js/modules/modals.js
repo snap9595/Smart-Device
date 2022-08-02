@@ -6,9 +6,7 @@ let modal = document.querySelector('.modal');
 let close = document.querySelector('.modal__close-btn');
 let overlay = document.querySelector('[data-close-modal]');
 let nameInput = document.querySelector('#modal-name');
-let agreementInput = document.querySelector('#modal-agreement');
-let inputFirst = document.querySelector('#modal-input-first');
-let inputLast = document.querySelector('#modal-input-last');
+let lastInput = document.querySelector('#last-input');
 
 const addModal = () => {
   const isEscapeKey = (evt) => evt.key === 'Escape';
@@ -25,7 +23,7 @@ const addModal = () => {
 
     if (modal.classList.contains('is-active')) {
       document.body.style.overflow = 'hidden';
-
+      openModal();
       header.setAttribute('inert', 'true');
       main.setAttribute('inert', 'true');
       footer.setAttribute('inert', 'true');
@@ -39,18 +37,22 @@ const addModal = () => {
       document.addEventListener('keydown', closeKeyModal);
       overlay.addEventListener('click', closeModal);
 
-      inputLast.addEventListener('focus', () => {
+      lastInput.addEventListener('focus', () => {
         close.focus();
-      });
-      inputFirst.addEventListener('focus', () => {
-        agreementInput.focus();
       });
     }
   });
 
+  function openModal() {
+    modal.style.display = 'flex';
+    modal.style.pointerEvents = 'auto';
+  }
+
   function closeModal() {
     modal.classList.remove('is-active');
     document.body.style.overflow = 'auto';
+    modal.style.display = 'none';
+    modal.style.pointerEvents = 'none';
     header.removeAttribute('inert');
     main.removeAttribute('inert');
     footer.removeAttribute('inert');

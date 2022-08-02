@@ -550,7 +550,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
   padding: 0;
 }
@@ -587,7 +586,7 @@ button,
   height: 55px;
 }
 
-.nav__list {
+.nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -609,7 +608,7 @@ button,
   list-style: none;
 }
 
-.nav__list a {
+.nav a {
   display: -ms-inline-grid;
   display: inline-grid;
   -ms-grid-rows: -webkit-min-content;
@@ -622,18 +621,18 @@ button,
   column-gap: 15px;
 }
 
-.nav__list a:hover {
+.nav a:hover {
   opacity: 0.8;
 }
 
-.nav__list svg,
-.nav__list span {
+.nav svg,
+.nav span {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
 }
 
-.nav__list span {
+.nav span {
   color: #f2f5f7;
   font-weight: 400;
   font-size: 1rem;
@@ -662,6 +661,15 @@ button,
 
 .nav .nav__button:hover {
   opacity: 0.7;
+}
+
+.nav .nav__link {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  padding: 0;
 }
 
 .main {
@@ -739,7 +747,7 @@ button,
   margin-top: 120px;
 }
 
-.advantages__list {
+.advantages__wrapper ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -832,6 +840,7 @@ button,
   line-height: 140%;
   color: transparent;
   background-image: url("../img/about-bg-desktop@1x.png");
+  background-color: #00b2ff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -1458,13 +1467,6 @@ button,
   background-color: rgba(4, 20, 39, 0.15);
 }
 
-.modal.is-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: auto;
-}
-
 .modal__form {
   display: -ms-grid;
   display: grid;
@@ -1599,7 +1601,7 @@ button,
     padding-top: 20px;
   }
 
-  .nav__list {
+  .nav ul {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -1610,7 +1612,7 @@ button,
     margin-right: 25px;
   }
 
-  .nav__list a {
+  .nav a {
     width: 30px;
     height: 30px;
     -ms-grid-rows: 1fr;
@@ -1618,11 +1620,7 @@ button,
     padding: 5px;
   }
 
-  .nav__wrapper {
-    display: none;
-  }
-
-  .nav__list span {
+  .nav span {
     display: none;
   }
 
@@ -1659,7 +1657,7 @@ button,
     margin-top: 80px;
   }
 
-  .advantages__list {
+  .advantages__wrapper ul {
     gap: 30px 28px;
   }
 
@@ -1946,7 +1944,7 @@ button,
     height: 35px;
   }
 
-  .nav__list {
+  .nav ul {
     max-width: 210px;
     padding-top: 0;
     margin-right: 14px;
@@ -2001,7 +1999,7 @@ button,
     margin-top: 50px;
   }
 
-  .advantages__list {
+  .advantages__wrapper ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 30px 0;
@@ -2043,11 +2041,11 @@ button,
     margin-right: 10px;
   }
 
-  .advantages__list .advantages__item--detective {
+  .advantages__wrapper .advantages__item--detective {
     min-height: 325px;
   }
 
-  .advantages__list .advantages__item--tag {
+  .advantages__wrapper .advantages__item--tag {
     min-height: 324px;
   }
 

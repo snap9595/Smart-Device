@@ -16,13 +16,13 @@
 <body class="body">
   <header class="header">
     <nav class="nav container">
-      <a aria-current="page">
+      <a class="nav__link" aria-current="page">
         <picture>
           <source media="(max-width: 767px)" srcset="./img/svg/logo-short.svg">
           <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device.">
         </picture>
       </a>
-      <ul class="nav__list">
+      <ul>
         <li>
           <a href="#">
             <svg width="20" height="20">
@@ -59,7 +59,7 @@
     <section class="advantages">
       <div class="advantages__wrapper container">
         <h3 class="visually-hidden">Преимущества</h3>
-        <ul class="advantages__list">
+        <ul>
           <li class="advantages__item">
             <svg width="35" height="35">
               <use xlink:href="img/sprite_auto.svg#icon-stop-watch"></use>
@@ -224,8 +224,7 @@
             </div>
             <div class="question-form__phone-wrapper">
               <label for="phone"></label>
-              <input type="tel" data-tel="question-phone" id="phone" name="userphone"
-                placeholder="Телефон"
+              <input type="tel" data-tel="question-phone" id="phone" name="userphone" placeholder="Телефон"
                 aria-label="Впишите номер вашего телефона." required>
             </div>
             <div class="question-form__question-wrapper">
@@ -284,9 +283,11 @@
         </ul>
       </section>
       <nav data-menu="menu" class="footer-nav is-nojs">
-        <label for="tab-button-1"></label>
-        <input id="tab-button-1" class="visually-hidden tab-button" type="checkbox" aria-label="разделы сайта.">
-        <h4 class="title">Разделы сайта</h4>
+        <form action="https://echo.htmlacademy.ru">
+          <label for="tab-button-1"></label>
+          <input id="tab-button-1" class="visually-hidden tab-button" type="checkbox" aria-label="разделы сайта.">
+          <h4 class="title">Разделы сайта</h4>
+        </form>
         <div class="footer-nav__wrapper ">
           <ul>
             <li>
@@ -316,9 +317,12 @@
         </div>
       </nav>
       <section data-menu="menu" class="contacts is-nojs">
-        <label for="tab-button-2"></label>
-        <input id="tab-button-2" class="visually-hidden tab-button" type="checkbox" aria-label="Открыть раздел Наш офис.">
-        <h4 class="title">Наш офис</h4>
+        <form action="https://echo.htmlacademy.ru">
+          <label for="tab-button-2"></label>
+          <input id="tab-button-2" class="visually-hidden tab-button" type="checkbox"
+            aria-label="Открыть раздел Наш офис.">
+          <h4 class="title">Наш офис</h4>
+        </form>
         <div class="contacts__wrapper ">
           <address>г. Мытищи, Олимпийский проспект, д.10</address>
           <ul>
@@ -343,14 +347,13 @@
       <div class="modal__content">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-        <input class="visually-hidden" id="modal-input-first">
         <button type="button" class="modal__close-btn">
           <span class="visually-hidden">Закрыть.</span>
         </button>
         <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal__name-wrapper">
             <label for="modal-name"></label>
-            <input class="asfeas" type="text" id="modal-name" name="username" placeholder="Имя" required>
+            <input type="text" id="modal-name" name="username" placeholder="Имя" required>
           </div>
           <div class="modal__phone-wrapper">
             <label for="modal-phone"></label>
@@ -366,8 +369,8 @@
           <div class="modal__agreement">
             <label for="modal-agreement">
               <input class="visually-hidden" data-checkbox="agreement-checkbox" id="modal-agreement" type="checkbox"
-                name="useragreement" required
-                aria-label="Выберете если согласны на обработку персональных данных." checked>
+                name="useragreement" required aria-label="Выберете если согласны на обработку персональных данных."
+                checked>
               <span>Я&nbsp;согласен на&nbsp;обработку&ensp; персональных данных</span>
               <span class="control-mark"></span>
               <svg class="modal__svg" width="9" height="6" viewBox="0 0 9 6" fill="none"
@@ -375,9 +378,10 @@
                 <path d="M1 2.3 3.8 5 8 1" stroke="#fff" />
               </svg>
             </label>
+            <label for="last-input"></label>
+            <input class="visually-hidden" id="last-input">
           </div>
         </form>
-        <input class="visually-hidden" id="modal-input-last">
       </div>
     </div>
   </div>
