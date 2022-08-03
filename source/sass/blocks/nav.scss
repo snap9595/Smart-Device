@@ -11,6 +11,7 @@
 
   @include vp-767 {
     padding-top: 15px;
+    padding-bottom: 10px;
   }
 }
 
@@ -27,7 +28,7 @@
 .nav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px 120px;
   max-width: 500px;
@@ -90,6 +91,7 @@
 }
 
 .nav .nav__button {
+  max-width: 200px;
   margin-top: 6px;
   margin-right: 61px;
   padding: 8px 16px 12px;

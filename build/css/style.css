@@ -592,9 +592,9 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -641,6 +641,7 @@ button,
 }
 
 .nav .nav__button {
+  max-width: 200px;
   margin-top: 6px;
   margin-right: 61px;
   padding: 8px 16px 12px;
@@ -714,6 +715,7 @@ button,
 }
 
 .boards__wrapper a {
+  max-width: 410px;
   margin-top: 47px;
   display: inline-block;
   padding: 17px 26px;
@@ -873,8 +875,8 @@ button,
 .about-us__wrapper p,
 .about-us__wrapper span {
   margin: 0;
-  padding-top: 9px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 138%;
 }
 
@@ -882,7 +884,7 @@ button,
   display: none;
   min-width: 180px;
   padding: 13px 12px;
-  margin-top: 23px;
+  margin-top: 30px;
   vertical-align: middle;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -1048,7 +1050,7 @@ button,
 }
 
 .question-form {
-  min-height: 840px;
+  min-height: 838px;
   background: -o-linear-gradient(311deg, rgba(4, 20, 39, 0.5) 33.5%, #00b3ff 33.5%);
   background: linear-gradient(139deg, rgba(4, 20, 39, 0.5) 33.5%, #00b3ff 33.5%);
 }
@@ -1192,7 +1194,7 @@ button,
 }
 
 .form button {
-  margin-top: 33px;
+  margin-top: 31px;
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 12px 10px;
@@ -1251,7 +1253,7 @@ button,
   -ms-grid-columns: 350px 1fr 1fr;
   grid-template-columns: 350px 1fr 1fr;
   gap: 20px 18px;
-  padding-top: 50px;
+  padding-top: 51px;
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
@@ -1550,6 +1552,13 @@ button,
 
 .main .modal__close-btn {
   display: none;
+}
+
+.main .is-nojs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: auto;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px), (min-resolution: 2dppx) and (min-width: 1024px) {
@@ -1938,6 +1947,7 @@ button,
 
   .nav {
     padding-top: 15px;
+    padding-bottom: 10px;
   }
 
   .nav img {
@@ -1974,7 +1984,7 @@ button,
 
   .boards__wrapper a {
     display: block;
-    width: 100%;
+    min-width: 100%;
     padding: 12px;
     margin-top: 45px;
     margin-left: auto;

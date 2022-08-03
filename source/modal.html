@@ -16,13 +16,13 @@
 <body class="body">
   <header class="header">
     <nav class="nav container">
-      <a href="index.html">
+      <a class="nav__link" aria-current="page">
         <picture>
           <source media="(max-width: 767px)" srcset="./img/svg/logo-short.svg">
-          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device">
+          <img src="img/svg/logo-long.svg" width="215" height="55" alt="Логотип сайта Smart Device.">
         </picture>
       </a>
-      <ul class="nav__list">
+      <ul>
         <li>
           <a href="#">
             <svg width="20" height="20">
@@ -44,7 +44,7 @@
     </nav>
   </header>
   <main class="main">
-    <div class="modal is-active">
+    <div class="modal is-nojs">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

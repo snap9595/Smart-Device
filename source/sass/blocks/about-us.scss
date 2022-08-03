@@ -86,8 +86,8 @@
 .about-us__wrapper p,
 .about-us__wrapper span {
   margin: 0;
-  padding-top: 9px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 138%;
 
   @include vp-1023 {
@@ -105,7 +105,7 @@
   display: none;
   min-width: 180px;
   padding: 13px 12px;
-  margin-top: 23px;
+  margin-top: 30px;
   vertical-align: middle;
   font-family: $ff-roboto-condensed;
   font-weight: 700;

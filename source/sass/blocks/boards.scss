@@ -93,6 +93,7 @@
 }
 
 .boards__wrapper a {
+  max-width: 410px;
   margin-top: 47px;
   display: inline-block;
   padding: 17px 26px;
@@ -117,7 +118,7 @@
 
   @include vp-767 {
     display: block;
-    width: 100%;
+    min-width: 100%;
     padding: 12px;
     margin-top: 45px;
     margin-left: auto;
