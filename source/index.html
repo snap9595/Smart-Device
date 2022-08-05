@@ -220,7 +220,7 @@
           <form class="question-form__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="question-form__name-wrapper">
               <label for="name"></label>
-              <input type="text" id="name" minlength="4" name="username" placeholder="Имя" required>
+              <input type="text" id="name" name="username" placeholder="Имя" required>
             </div>
             <div class="question-form__phone-wrapper">
               <label for="phone"></label>
@@ -243,7 +243,7 @@
                 </svg>
               </label>
             </div>
-            <button class="adsa" type="submit">Задать вопрос</button>
+            <button type="submit">Задать вопрос</button>
           </form>
         </div>
       </div>
@@ -357,7 +357,8 @@
           </div>
           <div class="modal__phone-wrapper">
             <label for="modal-phone"></label>
-            <input type="tel" data-tel="modal-phone" id="modal-phone" name="userphone" placeholder="Телефон"
+            <input type="tel" data-tel="modal-phone" minlength="17" id="modal-phone" name="userphone"
+              placeholder="Телефон"
               aria-label="Впишите номер вашего телефона." required>
           </div>
           <div class="modal__question-wrapper">
