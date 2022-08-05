@@ -1051,8 +1051,9 @@ button,
 
 .question-form {
   min-height: 838px;
-  background: -o-linear-gradient(311deg, rgba(4, 20, 39, 0.5) 33.5%, #00b3ff 33.5%);
-  background: linear-gradient(139deg, rgba(4, 20, 39, 0.5) 33.5%, #00b3ff 33.5%);
+  background: -o-linear-gradient(311deg, rgba(4, 20, 39, 0.5) 33.5%, rgba(255, 255, 255, 0) 33.5%);
+  background: linear-gradient(139deg, rgba(4, 20, 39, 0.5) 33.5%, rgba(255, 255, 255, 0) 33.5%);
+  background-color: #00b3ff;
 }
 
 .question-form__wrapper img {
@@ -1116,6 +1117,9 @@ button,
 }
 
 .question-form__agreement-wrapper {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   margin-top: 43px;
   margin-left: 5px;
 }
@@ -1517,6 +1521,9 @@ button,
 }
 
 .modal__agreement {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   margin-top: 12px;
 }
 
@@ -1803,6 +1810,7 @@ button,
   }
 
   .question-form__agreement-wrapper span {
+    max-width: 300px;
     margin-left: 25px;
   }
 
@@ -1818,6 +1826,10 @@ button,
 
   .form svg {
     left: 3px;
+  }
+
+  .footer {
+    padding-bottom: 58px;
   }
 
   .footer__wrap {
@@ -2196,6 +2208,10 @@ button,
   .form svg {
     top: 11px;
     left: 8px;
+  }
+
+  .footer {
+    padding-bottom: 15px;
   }
 
   .footer__wrap {

@@ -220,18 +220,17 @@
           <form class="question-form__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="question-form__name-wrapper">
               <label for="name"></label>
-              <input type="text" id="name" name="username" placeholder="Имя" required>
+              <input type="text" id="name" minlength="4" name="username" placeholder="Имя" required>
             </div>
             <div class="question-form__phone-wrapper">
               <label for="phone"></label>
-              <input type="tel" data-tel="question-phone" id="phone" name="userphone" placeholder="Телефон"
-                aria-label="Впишите номер вашего телефона." required>
+              <input type="tel" data-tel="question-phone" minlength="17" id="phone" name="userphone"
+                placeholder="Телефон" aria-label="Впишите номер вашего телефона." required>
             </div>
             <div class="question-form__question-wrapper">
               <label for="question"></label>
               <textarea id="question" name="userquestion" placeholder="Ваш вопрос"></textarea>
             </div>
-            <button type="submit">Задать вопрос</button>
             <div class="question-form__agreement-wrapper">
               <label for="agreement">
                 <input class="visually-hidden" id="agreement" type="checkbox" name="useragreement"
@@ -244,6 +243,7 @@
                 </svg>
               </label>
             </div>
+            <button class="adsa" type="submit">Задать вопрос</button>
           </form>
         </div>
       </div>
@@ -365,7 +365,6 @@
             <textarea data-textarea="textarea" id="modal-question" name="userquestion"
               placeholder="Ваш вопрос"></textarea>
           </div>
-          <button type="submit">Отправить</button>
           <div class="modal__agreement">
             <label for="modal-agreement">
               <input class="visually-hidden" data-checkbox="agreement-checkbox" id="modal-agreement" type="checkbox"
@@ -378,9 +377,10 @@
                 <path d="M1 2.3 3.8 5 8 1" stroke="#fff" />
               </svg>
             </label>
-            <label for="last-input"></label>
-            <input class="visually-hidden" id="last-input">
           </div>
+          <button type="submit">Отправить</button>
+          <label for="last-input"></label>
+          <input class="visually-hidden" id="last-input">
         </form>
       </div>
     </div>

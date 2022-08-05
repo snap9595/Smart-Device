@@ -1,6 +1,7 @@
 .question-form {
   min-height: 838px;
   background: $pearl-to-right;
+  background-color: $color-deep-sky-blue;
 
   @include vp-1023 {
     min-height: 580px;
@@ -117,6 +118,7 @@
 }
 
 .question-form__agreement-wrapper {
+  order: 1;
   margin-top: 43px;
   margin-left: 5px;
 
@@ -142,6 +144,7 @@
   color: $color-white--80;
 
   @include vp-1023 {
+    max-width: 300px;
     margin-left: 25px;
   }
 
