@@ -3,10 +3,7 @@ const addMask = () => {
     let keyCode;
 
     function Mask(event) {
-      let pos = this.selectionStart;
-      if (pos < 3) {
-        event.preventDefault();
-      }
+
       let matrix = '+7 (___) ___ ____';
       let i = 0;
       let def = matrix.replace(/\D/g, '');
@@ -28,6 +25,10 @@ const addMask = () => {
       }
       if (event.type === 'blur' && this.value.length < 5) {
         this.value = '';
+      }
+
+      if (input.value.length >= 20) {
+        event.preventDefault();
       }
     }
     input.addEventListener('input', Mask, false);
